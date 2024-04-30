@@ -16,6 +16,7 @@ public class OrderController {
 
     private final OrderService orderService;
 
+
     @PostMapping("/kafka")
     public void sendKafkaTopic()
     {
@@ -27,6 +28,7 @@ public class OrderController {
     public void processOrder(@RequestBody OrderRequest orderRequest)
     {
         log.info("Orders - {}", orderRequest);
+        this.orderService.processOrders(orderRequest.getOrders());
     }
 
 

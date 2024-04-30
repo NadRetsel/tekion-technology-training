@@ -7,7 +7,7 @@ import java.util.Date;
 @Data
 public class PartId {
 
-    private Long partId;
+    private Long id;
     private Date proposedDeliveryDate;
 
 }
