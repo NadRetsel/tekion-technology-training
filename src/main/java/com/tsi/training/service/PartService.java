@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class PartService implements IPartService {
+public class PartService {
 
     private final PartRepository partRepository;
     private final PartMapper partMapper;
@@ -23,8 +23,8 @@ public class PartService implements IPartService {
     }
 
 
-    public List<Part> createParts(List<PartDTO> partDTOs) {
-        return this.partMapper.toEntity(partDTOs);
+    public List<Part> createParts(List<PartDTO> partDTOList) {
+        return this.partMapper.toEntity(partDTOList);
     }
 
 }
