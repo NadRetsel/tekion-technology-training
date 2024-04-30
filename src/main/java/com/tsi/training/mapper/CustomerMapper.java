@@ -2,14 +2,13 @@ package com.tsi.training.mapper;
 
 import com.tsi.training.dto.CustomerDTO;
 import com.tsi.training.entity.Customer;
-import com.tsi.training.entity.Part;
 import org.mapstruct.Mapper;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
-public class CustomerMapper implements BaseEntityMapper<CustomerDTO, Customer> {
+public class CustomerMapper implements EntityMapper<Customer, CustomerDTO> {
 
     @Override
     public Customer toEntity(CustomerDTO dto) {

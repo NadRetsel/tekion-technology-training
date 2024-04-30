@@ -15,8 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 public class OrderDTO {
 
-    private Long id;
-    private Date orderDate;
+    private String reference;
+    private String orderDate;
     private List<PartId> partIds;
     private Long customerId;
     private Long dealerId;

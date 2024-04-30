@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/part")
+@RequestMapping("/parts")
 @RequiredArgsConstructor
 @Slf4j
 public class PartController {

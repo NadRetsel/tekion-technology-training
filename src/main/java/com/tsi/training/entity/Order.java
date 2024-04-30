@@ -22,6 +22,7 @@ public class Order {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)     private Long id;
     @Temporal(TemporalType.TIMESTAMP)                       private Date orderDate;
     @Type(type = "json") @Column(columnDefinition = "json") private List<PartId> partIds;
+    private String reference;
     private Long customerId;
     private Long dealerId;
 

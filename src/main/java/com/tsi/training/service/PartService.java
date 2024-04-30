@@ -2,7 +2,7 @@ package com.tsi.training.service;
 
 import com.tsi.training.dto.PartDTO;
 import com.tsi.training.entity.Part;
-import com.tsi.training.mapper.PartMapper;
+import com.tsi.training.mapper.EntityMapper;
 import com.tsi.training.repository.PartRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +17,7 @@ import java.util.Optional;
 public class PartService {
 
     private final PartRepository partRepository;
-    private final PartMapper partMapper;
+    private final EntityMapper<Part, PartDTO> partMapper;
 
 
     public Optional<Part> getPartByDescription(String description) {

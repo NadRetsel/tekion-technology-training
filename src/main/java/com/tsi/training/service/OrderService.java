@@ -16,7 +16,7 @@ public class OrderService {
 
     public void sendKafkaTopic()
     {
-        log.info("Sending Message topic from Order");
+        log.info("Orders - Sending Message topic from Order");
         kafkaTemplate.send("Message", "ProcessOrders");
     }
 }

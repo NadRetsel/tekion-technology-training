@@ -3,6 +3,7 @@ package com.tsi.training.service;
 import com.tsi.training.dto.CustomerDTO;
 import com.tsi.training.entity.Customer;
 import com.tsi.training.mapper.CustomerMapper;
+import com.tsi.training.mapper.EntityMapper;
 import com.tsi.training.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +17,7 @@ import java.util.List;
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
-    private final CustomerMapper customerMapper;
+    private final EntityMapper<Customer, CustomerDTO> customerMapper;
 
 
     public List<Customer> createCustomers(List<CustomerDTO> customerDTOList)

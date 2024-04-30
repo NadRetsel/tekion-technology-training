@@ -80,7 +80,7 @@
       "price": 599.99
     }
   ],
-  "customer": [
+  "customers": [
     {
       "id": 233,
       "firstName": "Axel",

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
-public class DealerMapper implements BaseEntityMapper<DealerDTO, Dealer> {
+public class DealerMapper implements EntityMapper<Dealer, DealerDTO> {
 
     @Override
     public Dealer toEntity(DealerDTO dto) {

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
-public class PartMapper implements BaseEntityMapper<PartDTO, Part> {
+public class PartMapper implements EntityMapper<Part, PartDTO> {
 
     @Override
     public Part toEntity(PartDTO dto) {

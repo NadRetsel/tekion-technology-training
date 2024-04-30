@@ -1,11 +1,10 @@
 package com.tsi.training.mapper;
 
-import org.mapstruct.MappingTarget;
 
 import java.util.List;
 
 
-public interface BaseEntityMapper<D, E> {
+public interface EntityMapper<E, D> {
 
     E toEntity(D dto);
 
