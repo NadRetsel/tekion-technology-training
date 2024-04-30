@@ -3,10 +3,10 @@ package com.tsi.training.dto;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class PartDTO extends BaseDTO {
+public class PartDTO {
 
+    private Long id;
     private String description;
     private Double price;
 }

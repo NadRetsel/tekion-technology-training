@@ -1,7 +1,5 @@
 package com.tsi.training.mapper;
 
-import com.tsi.training.dto.BaseDTO;
-import com.tsi.training.entity.BaseEntity;
 import org.mapstruct.MappingTarget;
 
 import java.util.List;

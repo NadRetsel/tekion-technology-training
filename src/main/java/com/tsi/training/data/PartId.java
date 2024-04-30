@@ -1,4 +1,4 @@
-package com.tsi.training.dto;
+package com.tsi.training.data;
 
 import lombok.Data;
 

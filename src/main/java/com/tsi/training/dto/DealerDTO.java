@@ -1,8 +1,11 @@
 package com.tsi.training.dto;
 
+
 import lombok.Data;
 
 @Data
-public class BaseDTO {
+public class DealerDTO {
+
     private Long id;
+    private String description;
 }

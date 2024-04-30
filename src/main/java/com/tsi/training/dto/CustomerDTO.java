@@ -1,9 +1,10 @@
 package com.tsi.training.dto;
 
+import com.tsi.training.data.Contact;
 import lombok.Data;
 
 @Data
-public class CustomerDto {
+public class CustomerDTO {
 
     private Long id;
     private String firstName;

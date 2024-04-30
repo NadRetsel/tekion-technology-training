@@ -1,7 +1,7 @@
-package com.tsi.training;
+package com.tsi.training.mapper;
 
 import com.google.gson.Gson;
-import com.tsi.training.dto.response.OrderDTO;
+import com.tsi.training.dto.OrderDTO;
 
 import static com.dashjoin.jsonata.Jsonata.jsonata;
 
