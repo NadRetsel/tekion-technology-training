@@ -19,6 +19,7 @@ import java.util.Objects;
 @Setter
 @RequiredArgsConstructor
 @TypeDef(name = "json", typeClass = JsonStringType.class)
+@Builder
 public class Customer {
 
     @Id private Long id;

@@ -1,9 +1,11 @@
 package com.tsi.training.dto;
 
 import com.tsi.training.data.Contact;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class CustomerDTO {
 
     private Long id;

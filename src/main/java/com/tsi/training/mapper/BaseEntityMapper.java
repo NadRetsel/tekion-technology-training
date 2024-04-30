@@ -5,13 +5,9 @@ import org.mapstruct.MappingTarget;
 import java.util.List;
 
 
-public interface BaseEntityMapper<D extends BaseDTO, E extends BaseEntity> {
+public interface BaseEntityMapper<D, E> {
 
     E toEntity(D dto);
-
-    E toEntity(D dto, @MappingTarget E entity);
-
-    E toEntity(E entitySource, @MappingTarget E entity);
 
     D toDto(E entity);
 

@@ -1,9 +1,10 @@
 package com.tsi.training.dto;
 
+import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 @Data
+@Builder
 public class PartDTO {
 
     private Long id;

@@ -1,6 +1,7 @@
 package com.tsi.training.entity;
 
 import com.tsi.training.dto.PartDTO;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,7 @@ import javax.persistence.Table;
 @Table(name = "parts")
 @Getter
 @Setter
+@Builder
 public class Part {
 
     @Id private Long id;
