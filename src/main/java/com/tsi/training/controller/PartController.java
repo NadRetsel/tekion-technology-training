@@ -4,6 +4,7 @@ import com.tsi.training.dto.PartDTO;
 import com.tsi.training.entity.Part;
 import com.tsi.training.service.PartService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,13 +15,13 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/part")
 @RequiredArgsConstructor
+@Slf4j
 public class PartController {
 
     private final PartService partService;
 
-
     @PostMapping
-    public List<Part> createParts(@RequestParam List<PartDTO> partDTOList)
+    public List<Part> createParts(@RequestBody List<PartDTO> partDTOList)
     {
         return this.partService.createParts(partDTOList);
     }

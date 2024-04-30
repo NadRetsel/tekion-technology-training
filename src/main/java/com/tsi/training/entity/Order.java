@@ -2,9 +2,7 @@ package com.tsi.training.entity;
 
 import com.tsi.training.data.PartId;
 import com.vladmihalcea.hibernate.type.json.JsonStringType;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
@@ -16,8 +14,9 @@ import java.util.List;
 @Table(name = "orders")
 @Getter
 @Setter
+@RequiredArgsConstructor
 @TypeDef(name = "json", typeClass = JsonStringType.class)
-@Builder
+@Builder @AllArgsConstructor
 public class Order {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)     private Long id;

@@ -5,6 +5,7 @@ import com.tsi.training.entity.Part;
 import com.tsi.training.mapper.PartMapper;
 import com.tsi.training.repository.PartRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PartService {
 
     private final PartRepository partRepository;
@@ -23,8 +25,11 @@ public class PartService {
     }
 
 
-    public List<Part> createParts(List<PartDTO> partDTOList) {
-        return this.partMapper.toEntity(partDTOList);
+    public List<Part> createParts(List<PartDTO> partDTOList)
+    {
+        log.info("Parts - Saving to database {}", partDTOList);
+        return this.partRepository.saveAll(
+                this.partMapper.toEntity(partDTOList));
     }
 
 }

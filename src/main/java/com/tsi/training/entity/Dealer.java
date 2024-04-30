@@ -12,6 +12,7 @@ import javax.persistence.Table;
 @Setter
 @RequiredArgsConstructor
 @Builder
+@AllArgsConstructor
 public class Dealer {
 
     @Id private Long id;

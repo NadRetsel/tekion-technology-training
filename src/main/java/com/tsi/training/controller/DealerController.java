@@ -7,6 +7,7 @@ import com.tsi.training.entity.Dealer;
 import com.tsi.training.service.CustomerService;
 import com.tsi.training.service.DealerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +22,7 @@ public class DealerController {
     private final DealerService dealerService;
 
 
-    public List<Dealer> createDealers(@RequestParam List<DealerDTO> dealerDTOList)
+    public List<Dealer> createDealers(@RequestBody List<DealerDTO> dealerDTOList)
     {
         return this.dealerService.createDealers(dealerDTOList);
     }

@@ -11,6 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -20,6 +21,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @TypeDef(name = "json", typeClass = JsonStringType.class)
 @Builder
+@AllArgsConstructor
 public class Customer {
 
     @Id private Long id;
@@ -28,7 +30,7 @@ public class Customer {
     private String addressLine1;
     private String addressLine2;
     private String postCode;
-    @Type(type = "json") @Column(columnDefinition = "json") private Contact contact;
+    @Type(type = "json") @Column(columnDefinition = "json") private List<Contact> contact;
 
 
 }
