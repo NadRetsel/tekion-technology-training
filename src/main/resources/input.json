@@ -6,35 +6,57 @@
       "partIds": [
         {
           "id": 1,
-          "propsedDeliveryDate": "2024-04-25 10:00"
+          "proposedDeliveryDate": "2024-04-25 10:00"
         },
         {
           "id": 3,
-          "propsedDeliveryDate": "2024-4-27 12:00"
+          "proposedDeliveryDate": "2024-4-27 12:00"
         },
         {
           "id": 4,
-          "propsedDeliveryDate": "2024-04-25 12:00"
+          "proposedDeliveryDate": "2024-04-25 12:00"
         }
       ],
       "customerId": 233,
       "dealerId": 1
     },
     {
+      "reference": "duplicate order",
+      "orderDate": "2024-04-23 10:00",
+      "partIds": [
+        {
+          "id": 1,
+          "proposedDeliveryDate": "2024-04-25 10:00"
+        },
+        {
+          "id": 3,
+          "proposedDeliveryDate": "2024-4-27 12:00"
+        },
+        {
+          "id": 4,
+          "proposedDeliveryDate": "2024-04-25 12:00"
+        }
+      ],
+      "customerId": 233,
+      "dealerId": 1
+    },
+
+
+    {
       "reference": "369831e6-1ce5-4479-be9a-de0165a13532",
       "orderDate": "2024-04-23 10:00",
       "partIds": [
         {
           "id": 1,
-          "propsedDeliveryDate": "2024-04-25 10:00"
+          "proposedDeliveryDate": "2024-04-25 10:00"
         },
         {
           "id": 2,
-          "propsedDeliveryDate": "2024-4-27 12:00"
+          "proposedDeliveryDate": "2024-4-27 12:00"
         },
         {
           "id": 4,
-          "propsedDeliveryDate": "2024-04-25 12:00"
+          "proposedDeliveryDate": "2024-04-25 12:00"
         }
       ],
       "customerId": 334,
@@ -46,7 +68,11 @@
       "partIds": [
         {
           "id": 5,
-          "propsedDeliveryDate": "2024-04-25 10:00"
+          "proposedDeliveryDate": "2024-04-25 10:00"
+        },
+        {
+          "id": 5,
+          "proposedDeliveryDate": "2024-04-25 10:00"
         }
       ],
       "customerId": 254,
@@ -96,7 +122,7 @@
       ]
     },
     {
-      "id": "334",
+      "id": 334,
       "firstName": "Shubham",
       "surname": "Tandale",
       "addressLine1": "Inchcape",
@@ -110,7 +136,7 @@
       ]
     },
     {
-      "id": "254",
+      "id": 254,
       "firstName": "Kevin",
       "surname": "Pham",
       "addressLine1": "Inchcape",
