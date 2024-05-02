@@ -20,17 +20,20 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.kafka:spring-kafka'
-	  implementation 'com.dashjoin:jsonata:0.9.6'
-	  implementation 'com.google.code.gson:gson:2.10.1'
+	implementation 'com.dashjoin:jsonata:0.9.6'
+	implementation 'com.google.code.gson:gson:2.10.1'
     
     
 
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.33'
     implementation group: 'com.ibm.jsonata4java', name: 'JSONata4Java', version: '2.4.9'
     implementation group: 'com.vladmihalcea', name: 'hibernate-types-5', version: '2.21.1'
-	  implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.5.Final'
-	  implementation group: 'org.projectlombok', name: 'lombok-mapstruct-binding', version: '0.2.0'
+	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.5.Final'
+	implementation group: 'org.projectlombok', name: 'lombok-mapstruct-binding', version: '0.2.0'
     implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.32'
+
+	implementation 'com.ibm.jsonata4java:JSONata4Java'
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
     
     
 

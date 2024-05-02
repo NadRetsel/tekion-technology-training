@@ -4,6 +4,7 @@ package com.tsi.training.service;
 import com.tsi.training.data.PartId;
 import com.tsi.training.dto.OrderDTO;
 import com.tsi.training.entity.Part;
+import com.tsi.training.json.JSONata;
 import com.tsi.training.repository.PartRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +21,7 @@ public class OrderService {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final PartRepository partRepository;
+    private final JSONata jsonata = new JSONata();
 
 
     public void sendKafkaTopic()
@@ -35,6 +37,8 @@ public class OrderService {
         {
             orderDTO.setPartIds(validateOrderParts(orderDTO));
         }
+
+        //this.jsonata.execute();
     }
 
 
