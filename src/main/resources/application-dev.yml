@@ -8,7 +8,7 @@ spring:
     password: root
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
 
   kafka:
     bootstrap-servers: localhost:9092

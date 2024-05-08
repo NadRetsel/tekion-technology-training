@@ -1,5 +1,6 @@
 package com.tsi.training.stepdefs;
 
+import com.google.gson.GsonBuilder;
 import com.tsi.training.controller.PartController;
 import com.tsi.training.dto.PartDTO;
 import com.tsi.training.entity.Part;
@@ -47,13 +48,6 @@ public class PartTests {
     private String description;
 
 
-    @Test
-    public void placeholder() throws Exception
-    {
-        this.mockMvc.perform(get("/parts/{description}", "item 1"))
-                .andReturn();
-    }
-
     @DataTableType
     public PartDTO convert(Map<String, String> entry){
         System.out.println(entry.get("description"));
@@ -72,26 +66,8 @@ public class PartTests {
 
     @When("save to Part Repository")
     public void saveToPartRepository() throws Exception {
-        System.out.println(this.mockMvc);
-        this.mvcResult = this.mockMvc.perform(MockMvcRequestBuilders
-                        .get("/parts/{description}", "item 1")
-                        .accept(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andReturn()
-                //.andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.employees").exists())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.employees[*].employeeId").isNotEmpty())
-                ;
-        /*
-        System.out.println(this.partController);
 
-        this.mockMvc = MockMvcBuilders.standaloneSetup(this.partController).build();
         System.out.println(this.mockMvc);
-
-        System.out.println(new GsonBuilder()
-                .setPrettyPrinting()
-                .create()
-                .toJson(this.partDTOList));
 
         this.mvcResult = this.mockMvc
                 .perform(post("/parts")
@@ -103,7 +79,7 @@ public class PartTests {
                 .andDo(print())
                 .andReturn();
 
-         */
+
     }
 
     @Then("Part Repository is populated")

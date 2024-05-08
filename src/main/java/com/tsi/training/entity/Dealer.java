@@ -2,9 +2,7 @@ package com.tsi.training.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "dealers")
@@ -15,6 +13,6 @@ import javax.persistence.Table;
 @AllArgsConstructor
 public class Dealer {
 
-    @Id private Long id;
+    @Id @GeneratedValue(strategy = GenerationType.AUTO) private Long id;
     private String description;
 }
