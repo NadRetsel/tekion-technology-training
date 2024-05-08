@@ -17,13 +17,12 @@ import java.util.List;
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
-    private final EntityMapper<Customer, CustomerDTO> customerMapper;
+    private final EntityMapper<Customer, CustomerDTO> customerMapper = new CustomerMapper();
 
 
     public List<Customer> createCustomers(List<CustomerDTO> customerDTOList)
     {
         log.info("Customers - Saving to database {}", customerDTOList);
-        return this.customerRepository.saveAll(
-                this.customerMapper.toEntity(customerDTOList));
+        return this.customerRepository.saveAll(this.customerMapper.toEntity(customerDTOList));
     }
 }
