@@ -7,6 +7,7 @@ import com.tsi.training.entity.Part;
 import com.tsi.training.repository.PartRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -18,15 +19,22 @@ import java.util.List;
 @Slf4j
 public class OrderService {
 
+    @Value("${spring.kafka.template.topics}") private final String[] topics;
+    private final String[] messages = {
+            "First message",
+            "Second message"
+    };
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final PartRepository partRepository;
 
 
     public void sendKafkaTopic()
     {
-        log.info("Orders - Sending Message topic from Order");
-        kafkaTemplate.send("Message", "ProcessOrders");
-        kafkaTemplate.send("AnotherMessage", "Hello again");
+        log.info("Sending message \"{}\" from topic [{}]", this.messages[0], this.topics[0]);
+        kafkaTemplate.send(this.topics[0], "First message");
+
+        log.info("Sending message \"{}\" from topic [{}]", this.messages[1], this.topics[1]);
+        kafkaTemplate.send(this.topics[1], "Second message");
     }
 
 
