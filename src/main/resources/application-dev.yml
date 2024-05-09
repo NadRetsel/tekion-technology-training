@@ -13,7 +13,7 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     template:
-      default-topic: Message
+      topics: Message, AnotherMessage
     consumer:
       group-id: messageId
       key-deserializer: org.apache.kafka.common.serialization.ShortDeserializer

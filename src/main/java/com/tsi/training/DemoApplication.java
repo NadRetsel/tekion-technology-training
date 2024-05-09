@@ -20,4 +20,10 @@ public class DemoApplication {
         log.info("Received topic from Order - {}", message);
     }
 
+    @KafkaListener(topics = "AnotherMessage")
+    public void handleAnotherMessage(String message)
+    {
+        log.info("Received {}", message);
+    }
+
 }
