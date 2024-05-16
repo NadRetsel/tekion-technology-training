@@ -1,0 +1,57 @@
+(
+$getOrder := function($dealerId)
+  {(
+    $.orders[dealerId = $dealerId]
+  )};
+
+$getCustomer := function($dealerId, $orderReference)
+{(
+  $orders := $getOrder($dealerId)[reference = $orderReference];
+
+  $customer := $.customers[id = $orders.**.customerId].
+  {
+    "fullname" : firstName & ' ' & surname,
+    "mobile" : contact.mobile,
+    "postCode" : postCode
+  }
+)};
+
+$getParts := function($dealerId, $orderReference, $orderDate)
+{(
+  $orders := $getOrder($dealerId)[reference = $orderReference];
+  $parts := $.parts;
+
+  $orders.partIds.(
+  $id := id;
+  $proposedDeliveryDate := proposedDeliveryDate;
+
+  $parts[id = $id].
+  {
+    "description" : description,
+    "price" : price,
+    "orderDate" : $orderDate,
+    "proposedDeliveryDate" : $proposedDeliveryDate
+  }
+  )
+)};
+
+{
+  "dealers" : dealers.(
+  $dealerId := id;
+  {
+    "description" : description,
+    "orders" : [
+      $getOrder($dealerId).(
+      $orderReference := reference;
+      $orderDate := orderDate;
+      {
+        "reference" : reference,
+
+        "customer" : $getCustomer($dealerId, $orderReference),
+        "parts" : $getParts($dealerId, $orderReference, $orderDate)
+
+      })
+    ]
+  })
+  }
+)
